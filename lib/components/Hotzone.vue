@@ -48,6 +48,11 @@ export default {
   mounted () {
     this.zones = this.zonesInit.concat()
   },
+  watch: {
+    zonesInit(val) {
+      this.zones = val.concat()
+    }
+  },
   methods: {
     changeInfo (res) {
       let { info, index } = res
