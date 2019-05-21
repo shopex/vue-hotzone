@@ -46,11 +46,11 @@ export default {
     }
   },
   mounted () {
-    this.zones = this.zonesInit.concat()
+    this.zones = JSON.parse(JSON.stringify(this.zonesInit))
   },
   watch: {
     zonesInit(val) {
-      this.zones = val.concat()
+      this.zones = JSON.parse(JSON.stringify(val))
     }
   },
   methods: {
